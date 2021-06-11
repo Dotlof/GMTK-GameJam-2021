@@ -15,6 +15,11 @@ public class scr_Check : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Entered collsion!");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
