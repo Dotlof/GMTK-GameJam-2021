@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scr_DragNDrop : MonoBehaviour
 {
-
+    //public GameObject me;
     private Vector3 offset;
     private Camera cam;
 
