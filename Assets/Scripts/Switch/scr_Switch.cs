@@ -25,22 +25,18 @@ public class scr_Switch : MonoBehaviour
         if(InL.GetComponent<scr_Switch_In>().Input == false && InD.GetComponent<scr_Switch_In>().Input == false)
         {
             sr.sprite = UnPowered;
-            Debug.Log("UnPowered");
         }
         else if(InL.GetComponent<scr_Switch_In>().Input == true && InD.GetComponent<scr_Switch_In>().Input == false)
         {
             sr.sprite = PoweredLR;
-            Debug.Log("Transferring Left to Right");
         }
         else if(InL.GetComponent<scr_Switch_In>().Input == false && InD.GetComponent<scr_Switch_In>().Input == true)
         {
             sr.sprite = PoweredUD;
-            Debug.Log("Transferring Up and Down");
         }
         else if(InL.GetComponent<scr_Switch_In>().Input == true && InD.GetComponent<scr_Switch_In>().Input == true)
         {
             sr.sprite = BothPowered;
-            Debug.Log("Error Both Inputs are Powered");
         }
     }
 }
