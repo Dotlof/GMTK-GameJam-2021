@@ -12,6 +12,7 @@ public class scr_DragNDrop : MonoBehaviour
     private float TempX;
     private float TempY;
 
+
     public bool InsideGrid = false;
 
     //private Vector3 GridOffset = new Vector3(16, -16, 0);
@@ -22,12 +23,10 @@ public class scr_DragNDrop : MonoBehaviour
 
     void OnMouseUp()
     {
-        //If Abfrage für position (Inventar oder Platziert)
-
-        
+        //If Abfrage für position (Inventar oder Platziert)        
         if (InsideGrid == true)
         {
-            transform.position = new Vector3((float)Math.Round(TempX) * 32 + 16, (float)Math.Round(TempY) * 32 - 16, 0);        
+            transform.position = new Vector3((TempX - TempX % 32 + 16), (TempY - TempY % 32 - 16), 0);        
         }
 
         //else transform.position = InstancePoint.transform.position; 
@@ -45,7 +44,9 @@ public class scr_DragNDrop : MonoBehaviour
     void OnMouseDrag()
     {
         gameObject.GetComponent<scr_ComponentPowerCheck>().active = false;
-        transform.position = GetMousePos() + offset;
+        //transform.position = GetMousePos() + offset;
+        transform.position = GetMousePos();
+
     }
 
     Vector3 GetMousePos()
@@ -57,8 +58,8 @@ public class scr_DragNDrop : MonoBehaviour
 
     private void Update()
     {
-        TempX = transform.position.x / 32;
-        TempY = transform.position.y / 32;
+        TempX = transform.position.x;
+        TempY = transform.position.y;
     }
 
 }

@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 50611f74c22555c4f8ae94c9c3663347, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,6 +105,13 @@ MonoBehaviour:
   sr: {fileID: 912849527417402401}
   SPowered: {fileID: 21300000, guid: 7570ceffaf4a4fa4b8537e42fe9a5326, type: 3}
   SUnpowered: {fileID: 21300000, guid: 50611f74c22555c4f8ae94c9c3663347, type: 3}
+  isrepeater: 0
+  isswitch: 0
+  issupply: 0
+  up: 1
+  down: 1
+  left: 1
+  right: 1
   powered: 0
   active: 1
 --- !u!61 &912849527417402431
@@ -166,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8db1f2c2e870d2418e9732922fa9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InsideGrid: 0
 --- !u!1 &912849527602607403
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd8a2e20a7a86e44ade96bc41be4995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 1
+  down: 0
+  left: 0
+  right: 0
 --- !u!61 &912849527602607404
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -303,6 +315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd8a2e20a7a86e44ade96bc41be4995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 0
+  left: 0
+  right: 1
 --- !u!61 &912849527973644619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -395,6 +411,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd8a2e20a7a86e44ade96bc41be4995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 0
+  left: 1
+  right: 0
 --- !u!61 &912849528296095330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -487,6 +507,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd8a2e20a7a86e44ade96bc41be4995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 1
+  left: 0
+  right: 0
 --- !u!61 &912849529317154384
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -44,6 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd8a2e20a7a86e44ade96bc41be4995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 1
+  left: 0
+  right: 0
 --- !u!61 &2186233208776213975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -114,6 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd8a2e20a7a86e44ade96bc41be4995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 1
+  down: 0
+  left: 0
+  right: 0
 --- !u!61 &2186233209703146099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -215,7 +223,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e53bb3588b0a30c44b4c3a6f6380f415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -242,6 +250,13 @@ MonoBehaviour:
   sr: {fileID: 2186233210027760824}
   SPowered: {fileID: 21300000, guid: 956395afc7200824ca64db05c120ad84, type: 3}
   SUnpowered: {fileID: 21300000, guid: e53bb3588b0a30c44b4c3a6f6380f415, type: 3}
+  isrepeater: 0
+  isswitch: 0
+  issupply: 0
+  up: 1
+  down: 1
+  left: 0
+  right: 0
   powered: 0
   active: 1
 --- !u!61 &2186233210027760827

@@ -47,6 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Input: 0
   CorrespondingOut: {fileID: 8405456644779912664}
+  up: 0
+  down: 0
+  left: 1
+  right: 0
 --- !u!61 &8405456644181401774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,6 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa90df9fe3427e46b457a147e6e100c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 1
+  left: 0
+  right: 0
   In: {fileID: 8405456645353758260}
   CrossIn: {fileID: 8405456644181401770}
   LinearIn: 0
@@ -235,6 +243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa90df9fe3427e46b457a147e6e100c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 0
+  left: 0
+  right: 1
   In: {fileID: 8405456644181401770}
   CrossIn: {fileID: 8405456645353758260}
   LinearIn: 0
@@ -365,7 +377,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: dfc55d40c4fa422408f92778418c6d27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -394,6 +406,11 @@ MonoBehaviour:
   SUnpowered: {fileID: 21300000, guid: dfc55d40c4fa422408f92778418c6d27, type: 3}
   isrepeater: 0
   isswitch: 1
+  issupply: 0
+  up: 1
+  down: 1
+  left: 1
+  right: 1
   powered: 0
   active: 1
 --- !u!114 &8405456645044227883
@@ -474,6 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8db1f2c2e870d2418e9732922fa9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InsideGrid: 0
 --- !u!1 &8405456645353758260
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +539,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Input: 0
   CorrespondingOut: {fileID: 8405456644461958391}
+  up: 1
+  down: 0
+  left: 0
+  right: 0
 --- !u!50 &8405456645353758264
 Rigidbody2D:
   serializedVersion: 4

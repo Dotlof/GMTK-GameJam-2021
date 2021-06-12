@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class scr_Check : MonoBehaviour
 {
+    public bool up = false;
+    public bool down = false;
+    public bool left = false;
+    public bool right = false;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
 
         if (collision.gameObject.tag == "Component" && GetComponentInParent<scr_ComponentPowerCheck>().active == true && collision.gameObject.GetComponent<scr_ComponentPowerCheck>().powered == true && collision.gameObject.GetComponent<scr_ComponentPowerCheck>().active == true)
         {
-            GetComponentInParent<scr_ComponentPowerCheck>().powered = true;
+            if ((collision.GetComponent<scr_ComponentPowerCheck>().down == true && up == true) || (collision.GetComponent<scr_ComponentPowerCheck>().up == true && down == true) || (collision.GetComponent<scr_ComponentPowerCheck>().left == true && right == true) || (collision.GetComponent<scr_ComponentPowerCheck>().right == true && left == true))
+            {
+                GetComponentInParent<scr_ComponentPowerCheck>().powered = true;
+            }
         }
     }
 

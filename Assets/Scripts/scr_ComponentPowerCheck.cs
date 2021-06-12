@@ -10,6 +10,13 @@ public class scr_ComponentPowerCheck : MonoBehaviour
 
     public bool isrepeater = false;
     public bool isswitch = false;
+    public bool issupply = false;
+
+    public bool up = false;
+    public bool down = false;
+    public bool left = false;
+    public bool right = false;
+
 
     public bool powered = false;
     public bool active = true;
@@ -17,14 +24,12 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(ResetEnergy());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active == false) powered = false;
-
         if (isrepeater == false && isswitch == false) {
 
             if (powered == true) sr.sprite = SPowered;
@@ -37,8 +42,19 @@ public class scr_ComponentPowerCheck : MonoBehaviour
             if(active == false) gameObject.GetComponent<scr_RepeaterPowerCheck>().active = active;
         }
 
+        if (active == false) powered = false;
+
+
     }
 
-
+    IEnumerator ResetEnergy()
+    {
+        if (issupply == false)
+        {
+            powered = false;
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(ResetEnergy());
+        }
+    }
     
     }
