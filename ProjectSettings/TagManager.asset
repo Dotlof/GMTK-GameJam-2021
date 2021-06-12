@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Check
   - Component
+  - Grid
   layers:
   - Default
   - TransparentFX
