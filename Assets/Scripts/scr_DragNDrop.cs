@@ -7,7 +7,7 @@ public class scr_DragNDrop : MonoBehaviour
 {
     public bool InsideComponent;
 
-    //public GameObject InstancePoint;
+    public GameObject InstancePoint;
     private Vector3 offset;
     private Camera cam;
 
@@ -49,7 +49,7 @@ public class scr_DragNDrop : MonoBehaviour
         //else transform.position = InstancePoint.transform.position; 
         gameObject.GetComponent<scr_ComponentPowerCheck>().active = true;
 
-        //if (InsideComponent == true) transform.position = InstancePoint.transform.position;
+        if(InsideComponent == true) transform.position = InstancePoint.transform.position;
     }
 
     void OnMouseDown()
@@ -71,6 +71,11 @@ public class scr_DragNDrop : MonoBehaviour
         {
             InsideComponent = true;
         }
+
+        if(collision.tag == "Grid")
+        {
+            InsideGrid = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -79,6 +84,11 @@ public class scr_DragNDrop : MonoBehaviour
         {
             InsideComponent = false;
         }
+
+        if (collision.tag == "Grid")
+        {
+            InsideGrid = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -86,6 +96,11 @@ public class scr_DragNDrop : MonoBehaviour
         if (collision.tag == "Component")
         {
             InsideComponent = true;
+        }
+
+        if (collision.tag == "Grid")
+        {
+            InsideGrid = true;
         }
     }
 
