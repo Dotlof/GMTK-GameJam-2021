@@ -9,6 +9,7 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     public Sprite SUnpowered;
 
     public bool isrepeater = false;
+    public bool isswitch = false;
 
     public bool powered = false;
     public bool active = true;
@@ -24,7 +25,7 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     {
         if (active == false) powered = false;
 
-        if (isrepeater == false) {
+        if (isrepeater == false && isswitch == false) {
 
             if (powered == true) sr.sprite = SPowered;
             else sr.sprite = SUnpowered;
