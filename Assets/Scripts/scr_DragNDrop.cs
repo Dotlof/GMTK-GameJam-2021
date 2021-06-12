@@ -47,7 +47,7 @@ public class scr_DragNDrop : MonoBehaviour
             //transform.position = new Vector3((TempX - TempX % 32 + 16), (TempY - TempY % 32 - 16), 0);        
         }
 
-        //else transform.position = InstancePoint.transform.position; 
+        else transform.position = InstancePoint.transform.position; 
         gameObject.GetComponent<scr_ComponentPowerCheck>().active = true;
 
         if(InsideComponent == true) transform.position = InstancePoint.transform.position;
@@ -89,19 +89,6 @@ public class scr_DragNDrop : MonoBehaviour
         if (collision.tag == "Grid")
         {
             InsideGrid = false;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Component")
-        {
-            InsideComponent = true;
-        }
-
-        if (collision.tag == "Grid")
-        {
-            InsideGrid = true;
         }
     }
 

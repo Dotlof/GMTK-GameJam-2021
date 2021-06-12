@@ -407,6 +407,7 @@ MonoBehaviour:
   isrepeater: 0
   isswitch: 1
   issupply: 0
+  istarget: 0
   up: 1
   down: 1
   left: 1
@@ -456,7 +457,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 16, y: 16}
   m_EdgeRadius: 0
 --- !u!50 &8405456645044227881
 Rigidbody2D:
@@ -491,6 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8db1f2c2e870d2418e9732922fa9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InsideComponent: 0
+  InstancePoint: {fileID: 0}
   InsideGrid: 0
 --- !u!1 &8405456645353758260
 GameObject:
