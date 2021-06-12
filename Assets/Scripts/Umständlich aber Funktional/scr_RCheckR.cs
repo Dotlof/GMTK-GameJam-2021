@@ -7,7 +7,7 @@ public class scr_RCheckR : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Component" && GetComponentInParent<scr_ComponentPowerCheck>().active == true && collision.gameObject.GetComponent<scr_ComponentPowerCheck>().powered == true && collision.gameObject.GetComponent<scr_ComponentPowerCheck>().active == true)
+        if (collision.gameObject.tag == "Component" && GetComponentInParent<scr_RepeaterPowerCheck>().active == true && collision.gameObject.GetComponent<scr_ComponentPowerCheck>().powered == true && collision.gameObject.GetComponent<scr_ComponentPowerCheck>().active == true)
         {
             GetComponentInParent<scr_RepeaterPowerCheck>().powerR = true;
         }

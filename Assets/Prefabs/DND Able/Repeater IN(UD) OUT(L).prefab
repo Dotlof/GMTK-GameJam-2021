@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 3445747912669721702}
   - component: {fileID: 3445747912669721703}
   - component: {fileID: 3999219534478807097}
+  - component: {fileID: -4461214842451384396}
   m_Layer: 0
   m_Name: Repeater IN(UD) OUT(L)
   m_TagString: Component
@@ -260,6 +261,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8db1f2c2e870d2418e9732922fa9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4461214842451384396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445747912669721699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb01fbaeb2c24524f9d6bf0238575c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 3445747912669721701}
+  SPowered: {fileID: 21300000, guid: a9201337189a0214faba818230ab08d7, type: 3}
+  SUnpowered: {fileID: 21300000, guid: c35460d652c7c48448759c8cc92a257b, type: 3}
+  isrepeater: 1
+  powered: 0
+  active: 1
 --- !u!1 &3445747912673724783
 GameObject:
   m_ObjectHideFlags: 0
