@@ -24,12 +24,14 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ResetEnergy());
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (issupply == true) powered = true;
+
         if (isrepeater == false && isswitch == false) {
 
             if (powered == true) sr.sprite = SPowered;
@@ -47,14 +49,5 @@ public class scr_ComponentPowerCheck : MonoBehaviour
 
     }
 
-    IEnumerator ResetEnergy()
-    {
-        if (issupply == false)
-        {
-            powered = false;
-            yield return new WaitForSeconds(1f);
-            StartCoroutine(ResetEnergy());
-        }
-    }
     
     }
