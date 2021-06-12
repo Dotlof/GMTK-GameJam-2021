@@ -17,6 +17,17 @@ public class scr_item_button : MonoBehaviour
     {
         invIDs = new int[10];
 
+        invIDs[0] = -1;
+        invIDs[1] = -1;
+        invIDs[2] = -1;
+        invIDs[3] = -1;
+        invIDs[4] = -1;
+        invIDs[5] = -1;
+        invIDs[6] = -1;
+        invIDs[7] = -1;
+        invIDs[8] = -1;
+        invIDs[9] = -1;
+
         if (canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR > 0)
         {
             invIDs[row] = 0;
@@ -93,10 +104,10 @@ public class scr_item_button : MonoBehaviour
             row++;
         }
 
-        for (int i = 0; i < invIDs.Length; i++)
+        /*for (int i = 0; i < invIDs.Length; i++)
         {
             Debug.Log(invIDs[i]);
-        }
+        }*/
     }
 
     // Update is called once per frame
