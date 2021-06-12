@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class scr_Switch_Out : MonoBehaviour
 {
+    public bool up = false;
+    public bool down = false;
+    public bool left = false;
+    public bool right = false;
 
     public GameObject In;
     public GameObject CrossIn;
@@ -28,7 +32,12 @@ public class scr_Switch_Out : MonoBehaviour
     {
         if (Out == true && collision.tag == "Component" && collision.GetComponent<scr_ComponentPowerCheck>().isrepeater == false && collision.GetComponent<scr_ComponentPowerCheck>().active == true)
         {
-            collision.GetComponent<scr_ComponentPowerCheck>().powered = true;
+            if ((collision.GetComponent<scr_ComponentPowerCheck>().down == true && up == true) || (collision.GetComponent<scr_ComponentPowerCheck>().up == true && down == true) || (collision.GetComponent<scr_ComponentPowerCheck>().left == true && right == true) || (collision.GetComponent<scr_ComponentPowerCheck>().right == true && left == true))
+            //if ((GetComponentInParent<scr_ComponentPowerCheck>().up == true && collision.GetComponent<scr_ComponentPowerCheck>().down == true) || (GetComponentInParent<scr_ComponentPowerCheck>().left == true && collision.GetComponent<scr_ComponentPowerCheck>().right == true) || (GetComponentInParent<scr_ComponentPowerCheck>().right == true && collision.GetComponent<scr_ComponentPowerCheck>().left == true) || (GetComponentInParent<scr_ComponentPowerCheck>().down == true && collision.GetComponent<scr_ComponentPowerCheck>().up == true)) {
+            { 
+                collision.GetComponent<scr_ComponentPowerCheck>().powered = true;
+                //}
+            }
         }  
     }
 

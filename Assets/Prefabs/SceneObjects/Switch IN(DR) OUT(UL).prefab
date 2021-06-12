@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: dfc55d40c4fa422408f92778418c6d27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -107,6 +107,11 @@ MonoBehaviour:
   SUnpowered: {fileID: 21300000, guid: dfc55d40c4fa422408f92778418c6d27, type: 3}
   isrepeater: 0
   isswitch: 1
+  issupply: 0
+  up: 1
+  down: 0
+  left: 1
+  right: 1
   powered: 0
   active: 1
 --- !u!114 &5600613267820103433
@@ -220,6 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa90df9fe3427e46b457a147e6e100c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 0
+  left: 1
+  right: 0
   In: {fileID: 5600613269777557640}
   CrossIn: {fileID: 5600613268601099798}
   LinearIn: 0
@@ -318,6 +327,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Input: 0
   CorrespondingOut: {fileID: 5600613269452954837}
+  up: 0
+  down: 1
+  left: 0
+  right: 0
 --- !u!50 &5600613268601099802
 Rigidbody2D:
   serializedVersion: 4
@@ -410,6 +423,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa90df9fe3427e46b457a147e6e100c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 1
+  down: 0
+  left: 0
+  right: 0
   In: {fileID: 5600613268601099798}
   CrossIn: {fileID: 5600613269777557640}
   LinearIn: 0
@@ -508,6 +525,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Input: 0
   CorrespondingOut: {fileID: 5600613268092790266}
+  up: 0
+  down: 0
+  left: 0
+  right: 1
 --- !u!61 &5600613269777557644
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c35460d652c7c48448759c8cc92a257b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -172,6 +172,12 @@ MonoBehaviour:
   SPowered: {fileID: 21300000, guid: a9201337189a0214faba818230ab08d7, type: 3}
   SUnpowered: {fileID: 21300000, guid: c35460d652c7c48448759c8cc92a257b, type: 3}
   isrepeater: 1
+  isswitch: 0
+  issupply: 0
+  up: 0
+  down: 1
+  left: 1
+  right: 1
   powered: 0
   active: 1
 --- !u!1 &3904849015316434707
@@ -266,6 +272,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a41c541a4b4e3b40803d3bbf5eafe7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 0
+  left: 0
+  right: 1
 --- !u!1 &3904849015681634847
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,3 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5f59d4885d3ce45b5b11dbedce73d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: 0
+  down: 0
+  left: 1
+  right: 0
