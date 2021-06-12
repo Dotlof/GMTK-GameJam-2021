@@ -31,6 +31,8 @@ public class scr_button_img : MonoBehaviour
         buttonID = Button.gameObject.GetComponent<scr_item_button>().buttonID;
         itemID = Button.gameObject.GetComponent<scr_item_button>().invIDs[buttonID];
 
+        //Debug.Log("ItemID: " + itemID);
+
         switch (itemID)
         {
             case 0:
