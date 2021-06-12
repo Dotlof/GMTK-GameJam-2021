@@ -11,6 +11,7 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     public bool isrepeater = false;
     public bool isswitch = false;
     public bool issupply = false;
+    public bool istarget = false;
 
     public bool up = false;
     public bool down = false;
