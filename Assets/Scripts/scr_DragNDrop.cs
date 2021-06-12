@@ -28,6 +28,7 @@ public class scr_DragNDrop : MonoBehaviour
     void Awake()
     {
         cam = Camera.main;
+        InstancePoint = GameObject.FindGameObjectWithTag("Spawnpoint");
     }
 
     void OnMouseUp()
