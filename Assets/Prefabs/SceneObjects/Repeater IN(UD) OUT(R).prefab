@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4362081435703937815}
   - component: {fileID: 4362081435703937811}
   - component: {fileID: 4362081435703937810}
+  - component: {fileID: -8348071134154417791}
   m_Layer: 0
   m_Name: Repeater IN(UD) OUT(R)
   m_TagString: Component
@@ -247,6 +248,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-8348071134154417791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362081435703937814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb01fbaeb2c24524f9d6bf0238575c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 4362081435703937808}
+  SPowered: {fileID: 21300000, guid: a9201337189a0214faba818230ab08d7, type: 3}
+  SUnpowered: {fileID: 21300000, guid: c35460d652c7c48448759c8cc92a257b, type: 3}
+  isrepeater: 1
+  powered: 0
+  active: 1
 --- !u!1 &4362081436140825366
 GameObject:
   m_ObjectHideFlags: 0

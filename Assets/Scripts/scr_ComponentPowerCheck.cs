@@ -8,6 +8,8 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     public Sprite SPowered;
     public Sprite SUnpowered;
 
+    public bool isrepeater = false;
+
     public bool powered = false;
     public bool active = true;
 
@@ -20,8 +22,20 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (powered == true) sr.sprite = SPowered;
-        else sr.sprite = SUnpowered;
+        if (active == false) powered = false;
+
+        if (isrepeater == false) {
+
+            if (powered == true) sr.sprite = SPowered;
+            else sr.sprite = SUnpowered;
+
+        }
+
+        if(isrepeater == true)
+        {
+            if(active == false) gameObject.GetComponent<scr_RepeaterPowerCheck>().active = active;
+        }
+
     }
 
 
