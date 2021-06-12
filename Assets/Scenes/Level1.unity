@@ -149,7 +149,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29008275}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -161,7 +161,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &29008277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -16, y: -48}
@@ -415,12 +415,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2654717177819215606, guid: 3986d045d64a57f43bfa050c9d3d8e5b, type: 3}
+      propertyPath: cableUD
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654717177819215606, guid: 3986d045d64a57f43bfa050c9d3d8e5b, type: 3}
       propertyPath: curveDR
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2654717177819215606, guid: 3986d045d64a57f43bfa050c9d3d8e5b, type: 3}
       propertyPath: CableLDR
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654717177819215606, guid: 3986d045d64a57f43bfa050c9d3d8e5b, type: 3}
+      propertyPath: CableURD
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2654717177819215606, guid: 3986d045d64a57f43bfa050c9d3d8e5b, type: 3}
       propertyPath: Spawnpoint
@@ -449,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3552264268920717815, guid: b95f12819403b57489a91458460cf7f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.25
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3552264268920717815, guid: b95f12819403b57489a91458460cf7f2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -486,6 +494,14 @@ PrefabInstance:
     - target: {fileID: 3552264268920717815, guid: b95f12819403b57489a91458460cf7f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781400772565392354, guid: b95f12819403b57489a91458460cf7f2, type: 3}
+      propertyPath: m_Size.x
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781400772565392354, guid: b95f12819403b57489a91458460cf7f2, type: 3}
+      propertyPath: m_Size.y
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95f12819403b57489a91458460cf7f2, type: 3}
@@ -1007,6 +1023,14 @@ PrefabInstance:
     - target: {fileID: 7076892174273182267, guid: 92749a3847706354096e259519366aed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076892174273182269, guid: 92749a3847706354096e259519366aed, type: 3}
+      propertyPath: m_Size.x
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076892174273182269, guid: 92749a3847706354096e259519366aed, type: 3}
+      propertyPath: m_Size.y
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92749a3847706354096e259519366aed, type: 3}

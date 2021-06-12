@@ -68,6 +68,7 @@ public class scr_DragNDrop : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        Debug.Log(collision);
         if(collision.tag == "Component")
         {
             InsideComponent = true;
@@ -81,6 +82,7 @@ public class scr_DragNDrop : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log(collision);
         if (collision.tag == "Component")
         {
             InsideComponent = false;
