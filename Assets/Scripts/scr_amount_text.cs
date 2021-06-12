@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class scr_amount_text : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject button;
     Text text;
-    public int TextID;
-    private int textbox;
+    int TextID;
+    int ItemID;
+    public int ButtonID;
 
     // Start is called before the first frame update
     void Start()
@@ -19,54 +21,57 @@ public class scr_amount_text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TextID == 0)
-        {
-            textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-            text.text = textbox.ToString() + "x";
-        }
+        ItemID = button.gameObject.GetComponent<scr_item_button>().invIDs[ButtonID];
 
-        switch (TextID)
+        switch (ItemID)
         {
             case 0:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
                 break;
             case 1:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableUD;
                 break;
             case 2:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().curveDR;
                 break;
             case 3:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().curveLD;
                 break;
             case 4:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().curveLU;
                 break;
             case 5:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().curveRU;
                 break;
             case 6:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().CableLDR;
                 break;
             case 7:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().CableLUD;
                 break;
             case 8:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().CableLUR;
                 break;
             case 9:
-                textbox = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR;
-                text.text = textbox.ToString() + "x";
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().CableURD;
+                break;
+            case 10:
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableCross;
+                break;
+            case 11:
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().RepeaterLDR;
+                break;
+            case 12:
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().RepeaterLUD;
+                break;
+            case 13:
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().RepeaterLUR;
+                break;
+            case 14:
+                TextID = canvas.gameObject.GetComponent<scr_Item_Instanciate>().RepeaterURD;
                 break;
         }
+
+        text.text = TextID.ToString() + "x";
     }
 }

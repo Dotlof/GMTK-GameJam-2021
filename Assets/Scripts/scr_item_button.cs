@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class scr_item_button : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject butImg;
+    public int buttonID;
+    int itemID;
     public int[] invIDs;
     int row = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        invIDs = new int[9];
+        invIDs = new int[10];
 
         if (canvas.gameObject.GetComponent<scr_Item_Instanciate>().cableLR > 0)
         {
@@ -98,6 +102,6 @@ public class scr_item_button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 }
