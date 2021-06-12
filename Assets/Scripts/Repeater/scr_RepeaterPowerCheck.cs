@@ -19,7 +19,7 @@ public class scr_RepeaterPowerCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ResetEnergy());
+
     }
 
     // Update is called once per frame
@@ -48,17 +48,6 @@ public class scr_RepeaterPowerCheck : MonoBehaviour
             gameObject.GetComponent<scr_ComponentPowerCheck>().powered = false;
         }
 
-    }
-
-    IEnumerator ResetEnergy()
-    {
-        {
-            powered = false;
-            powerL = false;
-            powerR = false;
-            yield return new WaitForSeconds(1f);
-            StartCoroutine(ResetEnergy());
-        }
     }
 
 }

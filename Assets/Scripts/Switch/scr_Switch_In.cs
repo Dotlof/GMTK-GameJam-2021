@@ -28,7 +28,7 @@ public class scr_Switch_In : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ResetEnergy());
+    
     }
 
     // Update is called once per frame
@@ -43,14 +43,5 @@ public class scr_Switch_In : MonoBehaviour
         else CorrespondingOut.GetComponent<scr_Switch_Out>().LinearIn = false;
     }
 
-    IEnumerator ResetEnergy()
-    {
-        {
-            Input = false;
-            yield return new WaitForSeconds(1f);
-            StartCoroutine(ResetEnergy());
-        }
-
-    }
 
 }
