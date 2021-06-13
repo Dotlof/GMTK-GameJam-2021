@@ -39,6 +39,7 @@ public class scr_Item_Instanciate : MonoBehaviour
 
     public GameObject Button;
     public GameObject Spawnpoint;
+    public GameObject Menu;
 
     int itemID;
 
@@ -164,13 +165,16 @@ public class scr_Item_Instanciate : MonoBehaviour
 
     public void MainMenu(string LevelName)
     {
-        SceneManager.LoadScene(LevelName);
+        Menu.GetComponent<scr_MainMenu>().Background.SetActive(true);
+        Menu.GetComponent<scr_MainMenu>().OpenMainMenu();
+
+        gameObject.SetActive(false);
     } 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Menu = GameObject.FindGameObjectWithTag("Menu");
     }
 
     // Update is called once per frame

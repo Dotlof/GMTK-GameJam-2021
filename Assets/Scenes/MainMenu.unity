@@ -2342,12 +2342,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762723444}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 523.6327, y: 269.1802, z: -512.11426}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -46.02294, y: -70.376366, z: -893.87213}
+  m_LocalScale: {x: 1.7454545, y: 1.7454545, z: 1.7454545}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1740021643}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &762723447
 MonoBehaviour:
@@ -3508,7 +3508,7 @@ RectTransform:
   - {fileID: 1975510599}
   - {fileID: 749655097}
   m_Father: {fileID: 1740021643}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4735,7 +4735,7 @@ GameObject:
   - component: {fileID: 1740021644}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4812,6 +4812,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 762723446}
   - {fileID: 1317593525}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -4837,6 +4838,7 @@ MonoBehaviour:
   Options: {fileID: 1233445412}
   MainMenu: {fileID: 1862478788}
   LevelSelect: {fileID: 749655096}
+  Background: {fileID: 1317593524}
   Lock2: {fileID: 217297520}
   Lock3: {fileID: 2020642425}
   Lock4: {fileID: 383281247}
@@ -4846,7 +4848,7 @@ MonoBehaviour:
   Lock8: {fileID: 1215379436}
   Lock9: {fileID: 1130289863}
   Lock10: {fileID: 146025151}
-  UnlockedLevel: 7
+  UnlockedLevel: 1
 --- !u!1 &1803209728
 GameObject:
   m_ObjectHideFlags: 0
