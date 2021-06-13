@@ -16,9 +16,41 @@ public static class SaveSystem
         stream.Close();
     }
 
+    public static void SaveLevel(scr_MainMenu level)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/level.bin";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        VolumeData data = new VolumeData(level);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static VolumeData LoadVolume()
     {
         string path = Application.persistentDataPath + "/volume.bin";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            VolumeData data = formatter.Deserialize(stream) as VolumeData;
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+    }
+
+    public static VolumeData LoadLevel()
+    {
+        string path = Application.persistentDataPath + "/level.bin";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

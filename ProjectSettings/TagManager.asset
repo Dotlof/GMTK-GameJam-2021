@@ -9,6 +9,7 @@ TagManager:
   - Grid
   - Spawnpoint
   - Field
+  - Menu
   layers:
   - Default
   - TransparentFX

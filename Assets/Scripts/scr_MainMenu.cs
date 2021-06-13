@@ -9,6 +9,7 @@ public class scr_MainMenu : MonoBehaviour
     public GameObject Options;
     public GameObject MainMenu;
     public GameObject LevelSelect;
+    public GameObject Background;
 
     public GameObject Lock2;
     public GameObject Lock3;
@@ -20,7 +21,12 @@ public class scr_MainMenu : MonoBehaviour
     public GameObject Lock9;
     public GameObject Lock10;
 
-    public int UnlockedLevel;
+    public int UnlockedLevel = 1;
+
+    public void SaveLevel()
+    {
+        SaveSystem.SaveLevel(this);
+    }
 
     public void OpenOptions()
     {
@@ -55,6 +61,12 @@ public class scr_MainMenu : MonoBehaviour
     {
         if (UnlockedLevel >= level)
         {
+            DontDestroyOnLoad(this.gameObject);
+            Credits.SetActive(false);
+            Options.SetActive(false);
+            MainMenu.SetActive(false);
+            LevelSelect.SetActive(false);
+            Background.SetActive(false);
             SceneManager.LoadScene("Level" + level);
         }
     }
@@ -68,6 +80,10 @@ public class scr_MainMenu : MonoBehaviour
     void Start()
     {
         //DontDestroyOnLoad(this.gameObject);
+        VolumeData data = SaveSystem.LoadLevel();
+        UnlockedLevel = data.UnlockedLevel;
+        //SaveSystem.SaveLevel(this);
+
         Options.SetActive(true);
         Options.SetActive(false);
     }
@@ -75,6 +91,7 @@ public class scr_MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(UnlockedLevel);
         if (UnlockedLevel >= 2)
         {
             Lock2.SetActive(false);
