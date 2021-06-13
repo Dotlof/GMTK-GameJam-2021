@@ -93,7 +93,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 7
 --- !u!1 &5554166194159416818
@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 5554166194159416823}
   - component: {fileID: 2444689637312696336}
   - component: {fileID: 7499655533719364731}
+  - component: {fileID: 1499553550882840722}
   m_Layer: 0
   m_Name: TargetU
   m_TagString: Component
@@ -225,7 +226,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 7
 --- !u!61 &7499655533719364731
@@ -254,3 +255,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
   m_EdgeRadius: 0
+--- !u!114 &1499553550882840722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554166194159416818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a4bf853eb5ca641968110039aad928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelID: 0

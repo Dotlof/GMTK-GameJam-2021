@@ -22,21 +22,25 @@ public class scr_Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(InL.GetComponent<scr_Switch_In>().Input == false && InD.GetComponent<scr_Switch_In>().Input == false)
-        {
-            sr.sprite = UnPowered;
-        }
-        else if(InL.GetComponent<scr_Switch_In>().Input == true && InD.GetComponent<scr_Switch_In>().Input == false)
-        {
-            sr.sprite = PoweredLR;
-        }
-        else if(InL.GetComponent<scr_Switch_In>().Input == false && InD.GetComponent<scr_Switch_In>().Input == true)
-        {
-            sr.sprite = PoweredUD;
-        }
-        else if(InL.GetComponent<scr_Switch_In>().Input == true && InD.GetComponent<scr_Switch_In>().Input == true)
-        {
-            sr.sprite = BothPowered;
+        
+
+            if (InL.GetComponent<scr_Switch_In>().Input == false && InD.GetComponent<scr_Switch_In>().Input == false)
+            {
+                sr.sprite = UnPowered;
+            }
+            else if (InL.GetComponent<scr_Switch_In>().Input == true && InD.GetComponent<scr_Switch_In>().Input == false)
+            {
+                sr.sprite = PoweredLR;
+            }
+            else if (InL.GetComponent<scr_Switch_In>().Input == false && InD.GetComponent<scr_Switch_In>().Input == true)
+            {
+                sr.sprite = PoweredUD;
+            }
+            else if (InL.GetComponent<scr_Switch_In>().Input == true && InD.GetComponent<scr_Switch_In>().Input == true)
+            {
+                sr.sprite = BothPowered;
+            }
+
         }
     }
-}
+

@@ -32,22 +32,25 @@ public class scr_RepeaterPowerCheck : MonoBehaviour
                 
         }
 
+        if (powerL == false || powerR == false) powered = false;
+
         if (powerL && powerR == true) powered = true;
 
-        if (powerL == true && powerR == false) sr.sprite = SPoweredL;
-        else if (powerR == true && powerL == false) sr.sprite = SPoweredR;
+            if (powerL == true && powerR == false) sr.sprite = SPoweredL;
+            else if (powerR == true && powerL == false) sr.sprite = SPoweredR;
 
-        else if (powered == true)
-        {
-            sr.sprite = SPowered;
-            gameObject.GetComponent<scr_ComponentPowerCheck>().powered = true;
-        }
-        else
-        {
-            sr.sprite = SUnpowered;
-            gameObject.GetComponent<scr_ComponentPowerCheck>().powered = false;
-        }
+            else if (powered == true)
+            {
+                sr.sprite = SPowered;
+                gameObject.GetComponent<scr_ComponentPowerCheck>().powered = true;
+            }
+            else
+            {
+                sr.sprite = SUnpowered;
+                gameObject.GetComponent<scr_ComponentPowerCheck>().powered = false;
+            }
 
-    }
+        }
+    
 
 }

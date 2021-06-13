@@ -22,6 +22,8 @@ public class scr_ComponentPowerCheck : MonoBehaviour
     public bool powered = false;
     public bool active = true;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,8 @@ public class scr_ComponentPowerCheck : MonoBehaviour
 
         if(isrepeater == true)
         {
-            if(active == false) gameObject.GetComponent<scr_RepeaterPowerCheck>().active = active;
+            if (active == false) gameObject.GetComponent<scr_RepeaterPowerCheck>().active = active;
+            else gameObject.GetComponent<scr_RepeaterPowerCheck>().active = true;
         }
 
         if (active == false) powered = false;
