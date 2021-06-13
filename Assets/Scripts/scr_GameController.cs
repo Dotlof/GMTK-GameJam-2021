@@ -31,16 +31,14 @@ public class scr_GameController : MonoBehaviour
 
             else if(Component.GetComponent<scr_ComponentPowerCheck>().isswitch == true)
             {
-                Component.GetComponent<scr_ComponentPowerCheck>().active = false;
                 Component.GetComponentInChildren<scr_Switch_In>().Input = false;
                 Component.GetComponentInChildren<scr_Switch_Out>().Out = false;
                 Component.GetComponentInChildren<scr_Switch_Out>().LinearIn = false;
-                Component.GetComponent<scr_ComponentPowerCheck>().active = true;
 
             }
 
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         StartCoroutine(ResetPower());
     }
 

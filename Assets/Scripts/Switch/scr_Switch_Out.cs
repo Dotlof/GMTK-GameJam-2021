@@ -31,7 +31,7 @@ public class scr_Switch_Out : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Out == true && collision.tag == "Component" && collision.GetComponent<scr_ComponentPowerCheck>().isrepeater == false && collision.GetComponent<scr_ComponentPowerCheck>().active == true && gameObject.GetComponentInParent<scr_ComponentPowerCheck>().active == true)
+        if (collision.tag == "Component" && collision.GetComponent<scr_ComponentPowerCheck>().isrepeater == false && collision.GetComponent<scr_ComponentPowerCheck>().active == true && gameObject.GetComponentInParent<scr_ComponentPowerCheck>().active == true)
         {
             if ((collision.GetComponent<scr_ComponentPowerCheck>().down == true && up == true) || (collision.GetComponent<scr_ComponentPowerCheck>().up == true && down == true) || (collision.GetComponent<scr_ComponentPowerCheck>().left == true && right == true) || (collision.GetComponent<scr_ComponentPowerCheck>().right == true && left == true))
             {
