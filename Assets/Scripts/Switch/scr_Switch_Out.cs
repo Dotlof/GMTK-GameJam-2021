@@ -30,11 +30,12 @@ public class scr_Switch_Out : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Component" && collision.GetComponent<scr_ComponentPowerCheck>().isrepeater == false && collision.GetComponent<scr_ComponentPowerCheck>().active == true)
+        if (Out == true && collision.tag == "Component" && collision.GetComponent<scr_ComponentPowerCheck>().isrepeater == false && collision.GetComponent<scr_ComponentPowerCheck>().active == true)
         {
+            Debug.Log(collision.transform.position);
             if ((collision.GetComponent<scr_ComponentPowerCheck>().down == true && up == true) || (collision.GetComponent<scr_ComponentPowerCheck>().up == true && down == true) || (collision.GetComponent<scr_ComponentPowerCheck>().left == true && right == true) || (collision.GetComponent<scr_ComponentPowerCheck>().right == true && left == true))
             //if ((GetComponentInParent<scr_ComponentPowerCheck>().up == true && collision.GetComponent<scr_ComponentPowerCheck>().down == true) || (GetComponentInParent<scr_ComponentPowerCheck>().left == true && collision.GetComponent<scr_ComponentPowerCheck>().right == true) || (GetComponentInParent<scr_ComponentPowerCheck>().right == true && collision.GetComponent<scr_ComponentPowerCheck>().left == true) || (GetComponentInParent<scr_ComponentPowerCheck>().down == true && collision.GetComponent<scr_ComponentPowerCheck>().up == true)) {
-            { 
+            {
                 collision.GetComponent<scr_ComponentPowerCheck>().powered = Out;
                 //}
             }

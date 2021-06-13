@@ -42,7 +42,8 @@ public class scr_ComponentPowerCheck : MonoBehaviour
 
         if(isrepeater == true)
         {
-            if(active == false) gameObject.GetComponent<scr_RepeaterPowerCheck>().active = active;
+            if (active == false) gameObject.GetComponent<scr_RepeaterPowerCheck>().active = active;
+            else gameObject.GetComponent<scr_RepeaterPowerCheck>().active = true;
         }
 
         if (active == false) powered = false;

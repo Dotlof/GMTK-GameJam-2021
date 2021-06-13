@@ -32,6 +32,8 @@ public class scr_RepeaterPowerCheck : MonoBehaviour
                 
         }
 
+        if (powerL == false || powerR == false) powered = false;
+
         if (powerL && powerR == true) powered = true;
 
         if (powerL == true && powerR == false) sr.sprite = SPoweredL;

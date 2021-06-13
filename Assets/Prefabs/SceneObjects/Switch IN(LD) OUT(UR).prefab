@@ -524,8 +524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   up: 0
   down: 0
-  left: 1
-  right: 0
+  left: 0
+  right: 1
   In: {fileID: 2063837496675180672}
   CrossIn: {fileID: 2063837497310600734}
   LinearIn: 0
