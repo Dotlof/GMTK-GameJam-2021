@@ -47,7 +47,7 @@ public class scr_Item_Instanciate : MonoBehaviour
         itemID = Button.gameObject.GetComponent<scr_item_button>().invIDs[id];
         Vector3 spawnPos = Spawnpoint.gameObject.transform.position;
 
-        Debug.Log(itemID);
+        //Debug.Log(itemID);
 
         switch (itemID)
         {

@@ -8,6 +8,8 @@ public class scr_DragNDrop : MonoBehaviour
     public bool InsideComponent;
 
     public GameObject InstancePoint;
+    public GameObject hitbox;
+    public GameObject FieldSize;
     private Vector3 offset;
     private Camera cam;
 
@@ -47,10 +49,13 @@ public class scr_DragNDrop : MonoBehaviour
             //transform.position = new Vector3((TempX - TempX % 32 + 16), (TempY - TempY % 32 - 16), 0);        
         }
 
-        else transform.position = InstancePoint.transform.position; 
+        else
+        {
+            transform.position = InstancePoint.transform.position;
+        }
         gameObject.GetComponent<scr_ComponentPowerCheck>().active = true;
 
-        if(InsideComponent == true) transform.position = InstancePoint.transform.position;
+        if(hitbox.gameObject.GetComponent<scr_hitbox_detect>().InsideComponent == true) transform.position = InstancePoint.transform.position;
     }
 
     void OnMouseDown()
@@ -68,30 +73,30 @@ public class scr_DragNDrop : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision);
+        //Debug.Log(collision);
         if(collision.tag == "Component")
         {
             InsideComponent = true;
         }
 
-        if(collision.tag == "Grid")
+        /*if(collision.tag == "Grid")
         {
             InsideGrid = true;
-        }
+        }*/
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision);
+        //Debug.Log(collision);
         if (collision.tag == "Component")
         {
             InsideComponent = false;
         }
 
-        if (collision.tag == "Grid")
+        /*if (collision.tag == "Grid")
         {
             InsideGrid = false;
-        }
+        }*/
     }
 
     Vector3 GetMousePos()
@@ -111,6 +116,25 @@ public class scr_DragNDrop : MonoBehaviour
 
         TempX = transform.position.x;
         TempY = transform.position.y;
+
+        if (InsideGrid == false) gameObject.GetComponent<scr_ComponentPowerCheck>().active = false;
+
+
+        FieldSize = GameObject.FindGameObjectWithTag("Field");
+
+        float Pos1X = FieldSize.gameObject.GetComponent<scr_field_size>().Pos1X;
+        float Pos1Y = FieldSize.gameObject.GetComponent<scr_field_size>().Pos1Y;
+        float Pos2X = FieldSize.gameObject.GetComponent<scr_field_size>().Pos2X;
+        float Pos2Y = FieldSize.gameObject.GetComponent<scr_field_size>().Pos2Y;
+
+        if (transform.position.x < Pos1X && transform.position.y < Pos1Y && transform.position.x > Pos2X && transform.position.y > Pos2Y)
+        {
+            InsideGrid = true;
+        }
+        else
+        {
+            InsideGrid = false;
+        }
     }
 
 }
