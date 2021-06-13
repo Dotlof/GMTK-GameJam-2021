@@ -80,12 +80,13 @@ public class scr_MainMenu : MonoBehaviour
     void Start()
     {
         //DontDestroyOnLoad(this.gameObject);
-        VolumeData data = SaveSystem.LoadLevel();
-        UnlockedLevel = data.UnlockedLevel;
         //SaveSystem.SaveLevel(this);
 
         Options.SetActive(true);
         Options.SetActive(false);
+        OpenMainMenu();
+        VolumeData data = SaveSystem.LoadLevel();
+        UnlockedLevel = data.UnlockedLevel;
     }
 
     // Update is called once per frame
